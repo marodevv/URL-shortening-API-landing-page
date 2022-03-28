@@ -8,7 +8,7 @@
 
 # Live
 
-- https://marodevv-url-shortening-api-landing-page.pages.dev/
+- https://marodevv-url-shortening-landing-page.pages.dev/
 
 # Credit
 
