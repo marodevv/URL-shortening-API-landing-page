@@ -42,7 +42,7 @@ module.exports = {
         sm: '.25s',
         md: '.4s',
       },
-      fontFamily: { default: 'sans-serif' },
+      fontFamily: { default: `'Poppins', sans-serif` },
       fontSize: {
         default: '16px',
         h1: '5rem',
