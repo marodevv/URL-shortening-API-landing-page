@@ -1,0 +1,33 @@
+{
+  "name": "url-shortening-api-landing-page",
+  "version": "1.0.0",
+  "scripts": {
+    "dev": "vite",
+    "build": "vite build",
+    "serve": "npm run build && vite preview"
+  },
+  "dependencies": {
+    "axios": "^0.26.1",
+    "nanoid": "^3.3.1",
+    "react": "^18.0.0-rc.2",
+    "react-dom": "^18.0.0-rc.2",
+    "react-icons": "^4.3.1",
+    "styled-components": "^5.3.3",
+    "tailwindcss": "^3.0.23",
+    "validator": "^13.7.0"
+  },
+  "devDependencies": {
+    "@vitejs/plugin-react": "^1.0.7",
+    "autoprefixer": "^10.4.2",
+    "postcss": "^8.4.7",
+    "twin.macro": "^2.8.2",
+    "vite": "^2.8.0",
+    "vite-plugin-babel-macros": "^1.0.6"
+  },
+  "babelMacros": {
+    "twin": {
+      "config": "./tailwind.config.js",
+      "preset": "styled-components"
+    }
+  }
+}
