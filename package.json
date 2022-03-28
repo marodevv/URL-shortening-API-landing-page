@@ -29,5 +29,9 @@
       "config": "./tailwind.config.js",
       "preset": "styled-components"
     }
-  }
+  },
+  "description": "- Created with React, Tailwind & Styled Components using *vite*🔥",
+  "main": "postcss.config.js",
+  "author": "",
+  "license": "ISC"
 }
