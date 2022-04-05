@@ -7,6 +7,8 @@ import useMobile from '../../hooks/use-mobile';
 import useNonInitialEffect from '../../hooks/use-non-initial-effect';
 import useAxios from '../../hooks/use-axios';
 import axios from '../../api/urlShortener'; // Axios Instance
+import { motion } from 'framer-motion';
+import wrapper from '../../animations/wrapper';
 
 const ShortenUrlComp = () => {
   const [value, setValue] = useState('');
@@ -20,8 +22,6 @@ const ShortenUrlComp = () => {
     axiosInstance: axios,
     method: 'GET',
   });
-
-  useEffect(() => inputRef.current.focus(), [focus]);
 
   useNonInitialEffect(() => {
     setData(prev => [...prev, { id, originalUrl, shortenedUrl, error, isLoading }]);
@@ -48,7 +48,11 @@ const ShortenUrlComp = () => {
   };
 
   return (
-    <Container>
+    <Container
+      variants={wrapper}
+      initial='offscreen'
+      whileInView='onscreen'
+      viewport={{ amount: 0.8, once: true }}>
       <Content isMobile={isMobile}>
         <ShortenUrl isMobile={isMobile}>
           <ShortenInput
@@ -141,8 +145,7 @@ const Shortened = styled.li`
   }
 `;
 
-const Container = styled.div`
-  //! Couldn't use tailwind tw classes in background gray cuz it converts to hsla instead of hsl (browser support problem)
+const Container = styled(motion.div)`
   ${tw`mt-lg`}
   background: ${theme`colors.gray`};
 

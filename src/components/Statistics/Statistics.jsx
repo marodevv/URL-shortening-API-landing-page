@@ -3,6 +3,8 @@ import tw, { styled, theme } from 'twin.macro';
 import data from './cardsData';
 import useMobile from '../../hooks/use-mobile';
 import { css } from 'styled-components';
+import { motion } from 'framer-motion';
+import wrapper from '../../animations/wrapper';
 
 const Statistics = () => {
   const [cardsData, setCardsData] = useState([]);
@@ -11,7 +13,12 @@ const Statistics = () => {
   useEffect(() => setCardsData(data), [data]);
 
   return (
-    <Wrapper isMobile={isMobile}>
+    <Wrapper
+      variants={wrapper}
+      initial='offscreen'
+      whileInView='onscreen'
+      viewport={{ amount: 0.8, once: true }}
+      isMobile={isMobile}>
       <Header>
         <Heading>Advanced Statistics</Heading>
         <Desc>
@@ -41,7 +48,7 @@ const Heading = tw.h2`text-dark-blue font-extrabold`;
 
 const Desc = tw.p`text-grayish-violet max-w-[30rem] my-4 mx-auto`;
 
-const Cards = styled.div`
+const Cards = styled(motion.div)`
   ${tw`flex justify-between items-center relative gap-md`}
   @media (max-width: ${theme`screens.xlg.max`}) and (min-width: ${theme`screens.mob.max`}) {
     margin: calc(${theme`spacing.lg`} * 2) 0;
@@ -66,7 +73,7 @@ const CardTitle = tw.h4`pt-16 text-dark-blue `;
 
 const CardDesc = tw.p`my-6 mx-0 font-thin text-grayish-violet break-words`;
 
-const Wrapper = styled.div`
+const Wrapper = styled(motion.div)`
   background: ${theme`colors.gray`};
   padding: ${theme`spacing.xlg`} ${theme`spacing.pg`};
 

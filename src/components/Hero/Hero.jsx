@@ -2,12 +2,19 @@ import useMobile from '../../hooks/use-mobile';
 import Button from '../shared/Button';
 import tw, { styled, theme } from 'twin.macro';
 import { css } from 'styled-components';
+import { motion } from 'framer-motion';
+import wrapper from '../../animations/wrapper';
 
 const Hero = () => {
   const isMobile = useMobile();
 
   return (
-    <Wrapper isMobile={isMobile}>
+    <Wrapper
+      variants={wrapper}
+      initial='offscreen'
+      whileInView='onscreen'
+      viewport={{ amount: 0.8, once: true }}
+      isMobile={isMobile}>
       <Content>
         <Heading>More than just shorter links</Heading>
         <Paragraph>
@@ -36,7 +43,7 @@ const Img = styled.img.attrs({
   ${tw`mr-[-5rem]`}
 `;
 
-const Wrapper = styled.section`
+const Wrapper = styled(motion.section)`
   ${tw`flex justify-between items-center py-lg pl-pg overflow-x-hidden mb-xlg`}
 
   ${({ isMobile }) => {

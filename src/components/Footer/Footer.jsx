@@ -3,12 +3,19 @@ import Button from '../shared/Button';
 import { FaFacebookSquare, FaTwitter, FaPinterest, FaInstagram } from 'react-icons/fa';
 import useMobile from '../../hooks/use-mobile';
 import { css } from 'styled-components';
+import { motion } from 'framer-motion';
+import wrapper from '../../animations/wrapper';
 
 const Footer = () => {
   const isMobile = useMobile();
 
   return (
-    <Wrapper isMobile={isMobile}>
+    <Wrapper
+      variants={wrapper}
+      initial='offscreen'
+      whileInView='onscreen'
+      viewport={{ amount: 0.8, once: true }}
+      isMobile={isMobile}>
       <Img />
       <LinksContainer>
         <Row>
@@ -74,7 +81,7 @@ const Social = styled.div`
   }
 `;
 
-const Wrapper = styled.footer`
+const Wrapper = styled(motion.footer)`
   ${tw`flex justify-between items-start gap-sm bg-very-dark-violet px-pg py-lg`}
   ${({ isMobile }) => {
     if (isMobile) {
