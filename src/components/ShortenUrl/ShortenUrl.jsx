@@ -69,7 +69,10 @@ const ShortenUrlComp = () => {
         </ShortenUrl>
         <Links>
           {data.map(urlData => (
-            <Shortened key={urlData.id}>
+            <Shortened
+              initial={{ opacity: 0, x: 100 }}
+              animate={{ opacity: 1, x: 0 }}
+              key={urlData.id}>
               <Link>{urlData.originalUrl}</Link>
               <Link shortened>
                 {urlData.isLoading
@@ -138,7 +141,7 @@ const Link = styled.p`
   color: ${({ shortened }) => (shortened ? theme`colors.cyan` : theme`colors.very-dark-violet`)};
 `;
 
-const Shortened = styled.li`
+const Shortened = styled(motion.li)`
   ${tw`bg-white flex justify-between items-center px-6 py-4 gap-md rounded-sm `}
   ${Link}:nth-last-child(2) {
     margin-left: auto;
