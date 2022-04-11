@@ -1,10 +1,16 @@
 # url-shortening-api-landing-page
 
-- Created with React, Tailwind & Styled Components using *vite*🔥
+- Fully responsive & animated
 
-- Fully responsive and animated
+- Tech used with *vite*🔥:
+  React
+  Tailwind & Styled Components
+  Framer motion
+  Axios
 
-- Additional stuff (hovers, animations, effects, etc...)
+# Features
+
+- Fetching data input from an external api by axios to shorten urls
 
 # Live
 
