@@ -19,5 +19,3 @@
 # Credit
 
 - Inspired by Frontend Mentor
-
-- Website: https://www.frontendmentor.io/
