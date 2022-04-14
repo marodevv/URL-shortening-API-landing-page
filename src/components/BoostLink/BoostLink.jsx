@@ -29,8 +29,8 @@ const Wrapper = styled(motion.div)`
   background-color: ${theme`colors.dark-violet`};
   ${({ isMobile }) =>
     isMobile
-      ? `background-image: url('../../assets/images/bg-boost-mobile.svg')`
-      : `background-image: url('../../assets/images/bg-boost-desktop.svg')`};
+      ? `background-image: url('/assets/images/bg-boost-mobile.svg')`
+      : `background-image: url('/assets/images/bg-boost-desktop.svg')`};
 `;
 
 export default BoostLink;

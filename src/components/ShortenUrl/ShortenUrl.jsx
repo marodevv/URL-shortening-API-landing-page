@@ -1,6 +1,6 @@
 import tw, { styled, theme } from 'twin.macro';
 import Button from '../shared/Button';
-import { useState, useEffect, useRef } from 'react';
+import { useState, useRef } from 'react';
 import validator from 'validator';
 import CopyButton from './CopyButton';
 import useMobile from '../../hooks/use-mobile';
@@ -111,8 +111,8 @@ const ShortenUrl = styled.form`
   ${tw`bg-cover bg-center bg-dark-violet my-0 mx-auto rounded-sm flex justify-center items-center gap-sm relative`}
   ${({ isMobile }) =>
     isMobile
-      ? `background-image: url('../../assets/images/bg-shorten-mobile.svg')`
-      : `background-image: url('../../assets/images/bg-shorten-desktop.svg')`};
+      ? `background-image: url('/assets/images/bg-shorten-mobile.svg')`
+      : `background-image: url('/assets/images/bg-shorten-desktop.svg')`};
   padding: ${({ isMobile }) => (isMobile ? theme`spacing.md` : '3rem')};
 `;
 

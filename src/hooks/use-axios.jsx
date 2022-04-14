@@ -14,13 +14,14 @@ const useAxios = configObj => {
   const [url, setUrl] = useState('');
 
   const refetch = url => {
-    setUrl(`/${url}`);
+    setUrl(`/${removeHttp(url)}`);
     setReload(prev => prev + 1);
   };
 
   useEffect(() => {
     const controller = new AbortController();
     const fetchData = async () => {
+      console.log(url);
       try {
         const res = await axiosInstance[method.toLowerCase()](url, {
           signal: controller.signal,
