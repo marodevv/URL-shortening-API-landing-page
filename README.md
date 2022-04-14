@@ -1,4 +1,4 @@
-# url-shortening-api-landing-page
+# Url-shortening-api-landing-page
 
 - Fully responsive & animated
 
@@ -7,10 +7,6 @@
   Tailwind & Styled Components
   Framer motion
   Axios
-
-# Features
-
-- Fetching data input from an external api by axios to shorten urls
 
 # Live
 
