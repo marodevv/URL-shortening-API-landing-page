@@ -1,16 +1,15 @@
 import React from 'react';
 import { createRoot } from 'react-dom/client';
+import GlobalReset from '/src/global/GlobalReset';
+import GlobalTypography from '/src/global/GlobalTypography';
 import App from './App';
-import GlobalReset from '../../global/GlobalReset';
-import GlobalTypography from '../../global/GlobalTypography';
-import '../../styles/index.css';
+import '/src/styles/index.css';
 
-const container = document.getElementById('root');
-const root = createRoot(container);
-root.render(
+createRoot(document.getElementById('root')).render(
   <>
     <GlobalReset />
     <GlobalTypography />
+
     <App />
   </>
 );
