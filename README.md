@@ -10,7 +10,7 @@
 
 # Live
 
-- https://marodevv-url-shortening-landing-page.pages.dev/
+- https://marodevv-url-shortening-landing-page.vercel.app
 
 # Credit
 
