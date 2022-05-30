@@ -1,17 +1,18 @@
 # Url-shortening-api-landing-page
 
-- Fully responsive & animated
+## Tech used with *vite*🔥:
 
-- Tech used with *vite*🔥:
-  React
-  Tailwind & Styled Components
-  Framer motion
-  Axios
+> Frontend
 
-# Live
+-   React
+-   Tailwind & Styled Components
+-   Framer motion
+-   Axios
 
-- https://marodevv-url-shortening-landing-page.vercel.app
+## Live
 
-# Credit
+> https://marodevv-url-shortening-api-landing-page.vercel.app
 
-- Inspired by Frontend Mentor
+## Credit
+
+> Inspired by Frontend Mentor
