@@ -19,13 +19,6 @@ module.exports = {
         lg: '5rem',
         xlg: '10rem',
         pg: '8.5%',
-        'card-p': '2rem',
-        btn: {
-          sm: '6.25rem',
-          lg: '9.5rem',
-          'p-sm': '0.4rem 0.675rem',
-          'p-lg': '0.875rem 1rem',
-        },
       },
       borderRadius: {
         sm: '.4rem',

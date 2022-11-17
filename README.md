@@ -4,15 +4,15 @@
 
 > Frontend
 
--   React
--   Tailwind
--   Styled components
--   Framer motion
--   Axios
+- React
+- Tailwind
+- Styled components
+- Framer motion
+- Axios
 
 ## Live
 
-> https://marodevv-url-shortening-api-landing-page.vercel.app
+> https://marwanmodev-url-shortening-api-landing-page.vercel.app
 
 ## Credit
 
