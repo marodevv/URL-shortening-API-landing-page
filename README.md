@@ -12,7 +12,7 @@
 
 ## Live
 
-> https://marwanmodev-url-shortening-api-landing-page.vercel.app
+> https://marwanm-dev-url-shortening-api-landing-page.vercel.app
 
 ## Credit
 
